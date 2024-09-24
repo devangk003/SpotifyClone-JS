@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone- Web Music Player</title>
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="mainbody">
+        <div class="top">
+            <div class="logo">
+                <img src="icons/Spotifylogo.svg" alt="SpotifyLogo" id="logo">
+                <img src="icons/menu.svg" alt="" id="menu">
+            </div>
+            <div class="center">
+                <div class="home">
+                    <img src="icons/home.svg" alt="" srcset="">
+                </div>
+                <div class="searchbar">
+                    <div class="searchlogo"></div>
+                    <input type="text" name="search" id="search" placeholder="Listen For Yourself!">
+                </div>
+            </div>
+            <div class="topright">
+                <div class="buttons">
+                    <div class="butt">Explore Premium</div>
+                    <div class="install butt">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.5" />
+                            <path
+                                d="M12 16L12 8M12 16C11.2998 16 9.99153 14.0057 9.5 13.5M12 16C12.7002 16 14.0085 14.0057 14.5 13.5"
+                                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <div>Install App</div>
+                    </div>
+                </div>
+                <div class="profile">
+                    <div class="dp">
+                        <img src="/icons/profile.svg" alt="DP">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="maincontainer">
+            <div class="library">
+                <div class="libheading">
+                    <div class="libheadingin">
+                        <div class="libico">
+                            <img src="icons/library.svg" alt="">
+                        </div>
+                        <h3>Your Library</h3>
+                    </div>
+                    <img style="filter: invert();" src="icons/cross.svg" alt="" id="cross">
+                </div>
+                <div class="playlist">
+                    <!-- <div class="song">
+                        <div class="name">
+                            <div class="songinfo"></div>
+                            <div class="artist"></div>
+                        </div>
+                        <div class="playico"><img src="icons/play.svg" alt=""></div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="main">
+                <div class="cards">
+                    <div class="card card1">
+                        <div class="albumart"><img
+                                src="https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72cd88126740eea841f657c14ba"
+                                alt=""></div>
+                        <div class="title">Rain Mood</div>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="playscreen">
+            <div class="playbar">
+            <div class="infobar"></div>
+            <div class="centerplay">
+                <div class="controls">
+                    <div class="previous">
+                        <img src="icons/prev.svg" alt="">
+                    </div>
+                    <div class="play" id="playPause">
+                        <img src="icons/play.svg" alt="">
+                    </div>
+                    <div class="next">
+                        <img src="icons/next.svg" alt="">
+                    </div>
+
+                </div>
+                <div class="seekbar">
+                    <input type="range" id="seekbar">
+
+                </div>
+            </div>
+            <div class="timer">00:00/00:00</div>
+            <div class="fullplayerico">
+                <img src="icons/full.svg" alt="" id="fpi">
+            </div>
+
+
+
+        </div>
+        <div class="volume-control">
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+        </div>
+    </div>
+    </div>
+
+    <div class="albumdetails">
+        <div class="albumimg">
+            <img src="icons/album.svg" alt="" id="albumart">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,594 @@
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+.playlist::-webkit-scrollbar {
+    width: 8px;
+    /* Width of the scrollbar */
+}
+
+.playlist::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    /* Slightly transparent background for the track */
+}
+
+.playlist::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+    /* Slightly transparent color for the scrollbar thumb */
+    border-radius: 4px;
+    /* Optional: rounded corners */
+}
+
+.playlist::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.7);
+    /* Darker thumb color on hover */
+}
+
+/* For Firefox */
+.playlist {
+    scrollbar-width: thin;
+    /* Makes the scrollbar thin */
+    scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
+    /* Thumb color and track color */
+}
+
+
+* {
+    /* overflow: hidden; */
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Product Sans, Sans Serif;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainbody {
+    width: 100vw;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    position: absolute;
+    margin: 0px;
+
+}
+
+.library,
+.main {
+    background-color: #141414;
+    border-radius: 5px;
+}
+
+.top {
+    width: 100vw;
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1vw;
+
+}
+
+.logo {
+    background-color: transparent;
+}
+
+.logo img {
+    width: 11vw;
+    background-color: transparent;
+}
+
+#menu {
+    filter: invert();
+    width: 25px;
+    position: absolute;
+    left: 25px;
+    top: 10px;
+    display: none;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.home img {
+    width: 2vw;
+    background-color: #1f1f1f;
+    border-radius: 30px;
+    padding: 8px;
+}
+
+#search {
+    padding: 15px;
+    border: none;
+    width: 27vw;
+    border-radius: 25px;
+    background-color: #1f1f1f;
+    border: none;
+    text-align: center;
+    font-family: Product Sans;
+    font-size: 15px;
+}
+
+.topright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.buttons div {
+    padding: 0.5em;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.buttons div:first-child {
+    background-color: white;
+    color: black;
+}
+
+.install {
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dp {
+    border-radius: 30px;
+}
+
+.dp img {
+    width: 2vw;
+}
+
+.butt {
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.maincontainer {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.library {
+    height: 75vh;
+    max-width: 25vw;
+    min-width: 25vw;
+    margin-left: 10px;
+    background-color: #1f1f1f;
+    display: flex;
+    flex-direction: column;
+}
+
+.libheading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-left: 5px;
+    padding: 8px;
+    padding-top: 14px;
+}
+
+.libheadingin {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.libheading h3 {
+    color: #b3b3b3;
+}
+
+.libico img {
+    filter: invert();
+}
+
+#cross {
+    display: none;
+}
+
+.playlist {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+
+}
+
+.playList li {
+    margin-left: 15px;
+}
+
+.song {
+    padding: 5px 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+
+}
+
+
+
+.songinfo {
+    color: rgb(187, 183, 183);
+    font-weight: 400;
+
+}
+
+.song:hover {
+    background-color: #69b169;
+    border-radius: 8px;
+
+    transition: ease-in 0.25s;
+}
+
+.song:hover img {
+    transform: scale(1.2);
+    transition: transform 0.25s ease-in;
+    /* Add a transition for smooth scaling */
+}
+
+.song:hover div {
+    color: black;
+}
+
+.artist {
+    font-size: 0.85rem;
+    text-indent: 2vw;
+    color: rgb(187, 183, 183);
+    font-style: italic;
+
+
+}
+
+
+.main {
+    height: 75vh;
+    width: 100%;
+    margin-right: 10px;
+
+}
+
+.card {
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #1f1f1f;
+    padding: 10px;
+
+}
+
+.title {
+    padding: 4px;
+}
+
+.cards {
+    max-height: 70vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.albumart img {
+    width: 10vw;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.centerplay {
+    display: flex;
+    flex-direction: column;
+}
+
+.playbar {
+    padding: 10px;
+    height: 10vh;
+    max-width: 100vw;
+    background-color: #1f1f1f;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.controls {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls div {
+    background-color: #383737;
+    border-radius: 30px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px black;
+
+}
+
+.controls div:nth-child(2) {
+    transform: scale(1.25);
+}
+
+.controls div:hover {
+    background-color: #90573f;
+    transition: ease-in 0.25s;
+    box-shadow: 2px 2px 2px black;
+    transform: scale(1.05);
+}
+
+.controls div:nth-child(2):hover {
+    transform: scale(1.55);
+}
+
+.controls div img {
+    justify-self: center;
+    filter: invert();
+}
+
+.infobar {
+    width: 10vw;
+}
+
+.timer {
+    width: 5vw;
+}
+
+#seekbar {
+    margin-top: 15px;
+    background-color: white;
+    width: 40vw;
+    height: 2px;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.volume-control {
+    position: absolute;
+    z-index: 990;
+    right: 10px;
+    bottom: 15px;
+    transform: scale(0.75);
+}
+
+.volume-control label {
+    color: white;
+    margin-right: 10px;
+}
+
+.volume-control input {
+    width: 100px;
+    /* Adjust width as needed */
+}
+
+.shuffelbox {
+    background-color: #383737;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 4px #000000;
+}
+
+.fullplayerico {
+    filter: invert();
+    width: 5px;
+}
+
+#albumart{
+    width: 100px;
+}
+
+
+.playscreen {
+    display: flex;
+    flex-direction: column;
+}
+
+.albumdetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 30vw;
+    border-radius: 8px;
+    margin: auto;
+    height: 100vh;
+    z-index: 999;
+    height: 400px;
+    bottom: 13.5vh;
+    left: 10px;
+    background-image: url("https://png.pngtree.com/background/20210711/original/pngtree-purple-hills-tech-digital-background-picture-image_1158758.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* .albumdetails {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -400%;
+    width: 95vw;
+    left: 2.5vw;
+    border-radius: 8px;
+    margin: auto;
+    height: 100vh;
+    z-index: 999;
+    height: 400px;
+    background-image: url("https://png.pngtree.com/background/20210711/original/pngtree-purple-hills-tech-digital-background-picture-image_1158758.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.album-art {
+    animation: rotate 10s linear infinite; /* Adjust the duration as needed */
+}
+
+
+@media only screen and (max-width: 850px) {
+
+    .center,
+    .topright {
+        display: none;
+        transition: ease-in 0.5s;
+    }
+
+    .logo {
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+        transition: ease-in 1s;
+    }
+
+    .library {
+        position: absolute;
+        left: -200%;
+        z-index: 999;
+        transition: ease-in 0.5s;
+        max-width: 100vh;
+        margin-right: 25px;
+        box-shadow: 2px 2px 10px green;
+    }
+
+    .playbar {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+    }
+
+    #cross {
+        display: block;
+    }
+
+    .main {
+        margin-left: 10px;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    * {
+        font-size: small;
+    }
+
+    .volume-control {
+        z-index: 990;
+        transform: scale(0.5);
+    }
+
+    .centerplay {
+        transform: scale(0.75);
+    }
+
+    .timer {
+        margin-right: 10px;
+    }
+
+    .fullplayerico {
+        display: block;
+    }
+
+    .albumdetails {
+        transition: ease-out 1s;
+
+    }
+
+    .albumdetails {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -400%;
+    width: 95vw;
+    left: 2.5vw;
+    border-radius: 8px;
+    margin: auto;
+    height: 100vh;
+    z-index: 999;
+    height: 400px;
+    background-image: url("https://png.pngtree.com/background/20210711/original/pngtree-purple-hills-tech-digital-background-picture-image_1158758.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    #fpi{
+        transition: ease-in 0.5s;
+    }
+
+    #albumart {
+        width: 40vw;
+
+    }
+
+    .top {
+        width: 100vw;
+        height: 7vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 1vw;
+    
+    }
+
+    #logo{
+        width: 20vw;
+        margin-top: 15px;
+    }
+
+
+}
