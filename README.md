@@ -7,7 +7,7 @@ Dynamic Album Art Display: Showcases album artwork with a rotating animation, en
 Hamburger Menu Navigation: A user-friendly hamburger menu allows easy access to different sections of the application, streamlining navigation.
 Play Controls: Users can play, pause, and skip tracks effortlessly, replicating the functionality of a real music player.
 
-# technology Used
+# Technology Used
 HTML
 CSS
 JavaScript
